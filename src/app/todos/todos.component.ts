@@ -12,6 +12,7 @@ import { Todo } from '../shared/todo.model';
 export class TodosComponent implements OnInit {
 
   todos: Todo[]
+  showValidationErrors: boolean;
 
   constructor(private dataService: DataService) { }
 
@@ -21,11 +22,17 @@ export class TodosComponent implements OnInit {
 
   onFormSubmit(form: NgForm){
     if (form.invalid){
-      return alert("form is not valid");
-
+      this.showValidationErrors = true;
     }
+    
     this.dataService.addTodo(new Todo(form.value.text));
+    this.showValidationErrors =false;
+    form.reset();
 
+  }
+
+  toggleCompleted(todo: Todo){
+    todo.completed = !todo.completed;
   }
 
 }

@@ -26,8 +26,8 @@
           </button>
         </p>
       </div>
-      
-      <div *ngIf="todoTextField.invalid">
+
+      <div *ngIf="todoTextField.invalid && showValidationErrors">
         <p class="help is-danger" *ngIf="todoTextField.errors!.required">
           Please enter the text of your Todo.
         </p>
@@ -35,7 +35,6 @@
           Please enter more than 2 characters.
         </p>
       </div>
-
     </form>
   </div>
 </div>
@@ -43,26 +42,11 @@
 <section class="section">
   <div class="container">
     <div class="todos-list">
-      <div
-        class="todo-item"
+      <app-todo-item
         *ngFor="let todo of todos"
-        [class.completed]="todo.completed"
-      >
-        <div class="check-box">
-          <i class="material-icons">check</i>
-        </div>
-        <div class="todo-text">
-          {{ todo.text }}
-        </div>
-        <div class="todo-controls-box">
-          <div class="todo-control-button">
-            <i class="material-icons">edit</i>
-          </div>
-          <div class="todo-control-button">
-            <i class="material-icons">delete</i>
-          </div>
-        </div>
-      </div>
+        [todo]="todo"
+        (toDoClicked)="toggleCompleted(todo)"
+      ></app-todo-item>
     </div>
   </div>
 </section>
