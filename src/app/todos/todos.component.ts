@@ -8,6 +8,7 @@ import { Todo } from '../shared/todo.model';
   templateUrl: './todos.component.html',
   styleUrls: ['./todos.component.scss']
 })
+
 export class TodosComponent implements OnInit {
 
   todos: Todo[]
@@ -19,7 +20,12 @@ export class TodosComponent implements OnInit {
   }
 
   onFormSubmit(form: NgForm){
-    console.log("Form Submitted");
+    if (form.invalid){
+      return alert("form is not valid");
+
+    }
+    this.dataService.addTodo(new Todo(form.value.text));
+
   }
 
 }
