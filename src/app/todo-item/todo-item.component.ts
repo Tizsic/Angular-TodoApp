@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import { Todo } from '../shared/todo.model';
+
 
 
 @Component({
@@ -7,7 +8,8 @@ import { Todo } from '../shared/todo.model';
   templateUrl: './todo-item.component.html',
   styleUrls: ['./todo-item.component.scss']
 })
-export class TodoItemComponent implements OnInit {
+export class TodoItemComponent implements OnInit{
+
 
   constructor() { }
 
