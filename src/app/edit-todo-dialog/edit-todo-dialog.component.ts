@@ -10,28 +10,26 @@ import { Inject } from '@angular/core';
   styleUrls: ['./edit-todo-dialog.component.scss']
 })
 export class EditTodoDialogComponent implements OnInit {
- 
+
   constructor(public dialogRef: MatDialogRef<EditTodoDialogComponent>, @Inject(MAT_DIALOG_DATA) public todo: Todo) { }
 
   ngOnInit(): void {
   }
 
-  onFormSubmit(form: NgForm){
+  onFormSubmit(form: NgForm) {
     if (form.invalid) {
       return;
     }
-    
+
     const updatedTodo = {
       ...this.todo,
       ...form.value
     }
 
-
     this.dialogRef.close(updatedTodo);
   }
 
-  close(){
+  close() {
     this.dialogRef.close();
   }
 }
- 

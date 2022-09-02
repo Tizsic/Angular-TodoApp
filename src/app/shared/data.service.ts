@@ -11,7 +11,7 @@ export class DataService {
 
   constructor() { }
 
-  getAllTodos () {
+  getAllTodos() {
     return this.todos
   }
 
