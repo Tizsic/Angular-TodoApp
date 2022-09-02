@@ -28,11 +28,11 @@
       </div>
       
       <div *ngIf="todoTextField.invalid">
-        <p class="help is-danger" *ngIf="todoTextField.errors.required">
+        <p class="help is-danger" *ngIf="todoTextField.errors!.required">
           Please enter the text of your Todo.
         </p>
-        <p class="help is-danger" *ngIf="todoTextField.minlength">
-          Please enter the text of your Todo.
+        <p class="help is-danger" *ngIf="todoTextField.errors!.minlength">
+          Please enter more than 2 characters.
         </p>
       </div>
 
