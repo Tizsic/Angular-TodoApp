@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { DataService } from '../shared/data.service';
-import { Todo } from '../shared/todo.model';
+import { DataService } from '../../shared/data.service';
+import { Todo } from '../../shared/todo.model';
 import { MatDialog } from '@angular/material/dialog';
 import { EditTodoDialogComponent } from '../edit-todo-dialog/edit-todo-dialog.component';
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Todo } from '../shared/todo.model';
+import { Todo } from '../../shared/todo.model';
 import { Inject } from '@angular/core';
 
 @Component({
