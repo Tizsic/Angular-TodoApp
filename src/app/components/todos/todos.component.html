@@ -42,13 +42,15 @@
 <section class="section">
   <div class="container">
     <div class="todos-list">
-      <app-todo-item
-        *ngFor="let todo of todos"
-        [todo]="todo"
-        (toDoClicked)="toggleCompleted(todo)"
-        (editClicked)="editTodo(todo)"
-        (deleteClicked)="deleteTodo(todo)"
-      ></app-todo-item>
+      <long-press>
+        <app-todo-item
+          *ngFor="let todo of todos"
+          [todo]="todo"
+          (toDoClicked)="toggleCompleted(todo)"
+          (editClicked)="editTodo(todo)"
+          (deleteClicked)="deleteTodo(todo)"
+        ></app-todo-item>
+      </long-press>
     </div>
   </div>
 </section>

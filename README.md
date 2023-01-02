@@ -3,4 +3,4 @@ Tippy.js
 Bulma
 Google Angular Material Design 
 
-Link to this application can be found at: https://dreamy-belekoy-63a04c.netlify.app
+Link to this application can be found at: https://orange-rock-03932c110.2.azurestaticapps.net
